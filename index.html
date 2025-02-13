@@ -15,7 +15,7 @@
         <div class="relative z-10">
             <h1 class="text-4xl font-bold">Apply Now for MBBS Abroad</h1>
             <p class="mt-4">Start your medical career in top universities across the globe.</p>
-            <button class="mt-6 px-6 py-2 bg-yellow-500 text-black font-semibold rounded-lg">Get Free Consultation</button>
+            <button class="mt-6 px-6 py-2 bg-yellow-500 text-black font-semibold rounded-lg hover:bg-yellow-300 cursor-pointer">Get Free Consultation</button>
         </div>
     </section>
     
@@ -62,16 +62,18 @@
                 <option value="Uzbekistan">Uzbekistan</option>
                 <option value="Kazakhstan">Kazakhstan</option>
             </select>
-            <button type="submit" class="w-full bg-yellow-500 p-2 font-semibold rounded">Submit</button>
+            <button type="submit" class="w-full bg-green-600 hover:bg-green-500 cursor-pointer text-white p-2 font-semibold rounded">Submit</button>
         </form>
     </section>
     
     <!-- Popup Message -->
-    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white p-6 rounded shadow-lg text-center">
-            <p class="text-lg font-semibold">Form submitted successfully!</p>
-            <button id="closePopup" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded">Close</button>
-        </div>
+<div id="popup" class=" black fixed inset-0 flex items-center justify-center hidden" style="background-color: rgba(0, 0, 0, 0.686);">
+    <div class="bg-white p-6 rounded shadow-lg text-center">
+        <p class="text-lg font-semibold">Form submitted successfully!</p>
+        <button id="closePopup" class="mt-4 px-4 py-2 bg-blue-600 cursor-pointer text-white rounded">Close</button>
     </div>
-    
+</div>
+
+
+    <script src="script.js"></script>
 </html>
