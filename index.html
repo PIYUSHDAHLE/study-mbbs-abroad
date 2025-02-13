@@ -4,60 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study MBBS Abroad</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" type="text/tailwindcss" href="style.css">
 </head>
-<body>
+<body class="bg-gray-200">
     
     <!-- Hero Section -->
-    <section >
-        <h1>Apply Now for MBBS Abroad</h1>
-        <p>Start your medical career in top universities across the globe.</p>
-        <button>Get Free Consultation</button>
+    <section class="relative text-white text-center py-20 bg-cover bg-center" style="background-image: url('./images/collegeImg.jpg');">
+        <div class="absolute inset-0 bg-opacity-50 bg-black opacity-60"></div>
+        <div class="relative z-10">
+            <h1 class="text-4xl font-bold">Apply Now for MBBS Abroad</h1>
+            <p class="mt-4">Start your medical career in top universities across the globe.</p>
+            <button class="mt-6 px-6 py-2 bg-yellow-500 text-black font-semibold rounded-lg">Get Free Consultation</button>
+        </div>
     </section>
     
+    
     <!-- Why Study MBBS Abroad -->
-    <section>
-        <h2>Why Study MBBS Abroad?</h2>
-        <div>
-            <div>Affordable Fees</div>
-            <div>Globally Recognized</div>
-            <div>World-Class Education</div>
+    <section class="py-16 px-6 text-center">
+        <h2 class="text-3xl font-bold">Why Study MBBS Abroad?</h2>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-white shadow-md rounded-lg">Affordable Fees</div>
+            <div class="p-6 bg-white shadow-md rounded-lg">Globally Recognized</div>
+            <div class="p-6 bg-white shadow-md rounded-lg">World-Class Education</div>
         </div>
     </section>
     
     <!-- Top Countries -->
-    <section>
-        <h2>Top Countries for MBBS</h2>
-        <div>
-            <div>Russia</div>
-            <div>Uzbekistan</div>
-            <div>Kazakhstan</div>
-            <div>Philippines</div>
-            <div>Georgia</div>
-            <div>Egypt</div>
+    <section class="py-16 px-6 text-center bg-purple-600">
+        <h2 class="text-3xl font-bold text-white">Top Countries for MBBS</h2>
+        <div class="mt-6 grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-white shadow-md rounded-lg">Russia</div>
+            <div class="p-6 bg-white shadow-md rounded-lg">Uzbekistan</div>
+            <div class="p-6 bg-white shadow-md rounded-lg">Kazakhstan</div>
+            <div class="p-6 bg-white shadow-md rounded-lg">Philippines</div>
+            <div class="p-6 bg-white shadow-md rounded-lg">Georgia</div>
+            <div class="p-6 bg-white shadow-md rounded-lg">Egypt</div>
         </div>
     </section>
     
     <!-- Admission Process & Eligibility -->
-    <section>
-        <h2>Admission Process & Eligibility</h2>
-        <p>Follow these simple steps to apply.</p>
+    <section class="py-16 px-6 text-center">
+        <h2 class="text-3xl font-bold">Admission Process & Eligibility</h2>
+        <p class="mt-4">Follow these simple steps to apply.</p>
     </section>
     
     <!-- Lead Form -->
-    <section>
-        <h2>Apply Now</h2>
-        <form>
-            <input type="text" id="name" placeholder="Full Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="tel" id="phone" placeholder="Phone" required>
-            <select id="country" required>
+    <section class="py-16 px-6 text-center bg-purple-600 text-white">
+        <h2 class="text-3xl font-bold">Apply Now</h2>
+        <form class="mt-6 max-w-md mx-auto bg-white p-6 rounded-lg shadow-md text-black" id="leadForm">
+            <input type="text" id="name" placeholder="Full Name" class="w-full p-2 mb-4 border rounded" required>
+            <input type="email" id="email" placeholder="Email" class="w-full p-2 mb-4 border rounded" required>
+            <input type="tel" id="phone" placeholder="Phone" class="w-full p-2 mb-4 border rounded" required>
+            <select id="country" class="w-full p-2 mb-4 border rounded" required>
                 <option value="">Select Country Preference</option>
                 <option value="Russia">Russia</option>
                 <option value="Uzbekistan">Uzbekistan</option>
                 <option value="Kazakhstan">Kazakhstan</option>
             </select>
-            <button type="submit">Submit</button>
+            <button type="submit" class="w-full bg-yellow-500 p-2 font-semibold rounded">Submit</button>
         </form>
     </section>
-</body>
+    
+    <!-- Popup Message -->
+    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-6 rounded shadow-lg text-center">
+            <p class="text-lg font-semibold">Form submitted successfully!</p>
+            <button id="closePopup" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded">Close</button>
+        </div>
+    </div>
+    
 </html>
